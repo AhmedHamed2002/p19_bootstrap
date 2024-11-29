@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth ;  
+}
+
+.title {
+    font-family: "Homemade Apple", cursive ;
+    color: aquamarine !important;
+}
+.dropdown-item:hover{
+    color: black !important;
+}
+
+main{
+    position: relative;
+
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: #4979779b ; 
+    }
+
+    &::after{
+        content:"";
+        width: 65%;
+        height: 100%;
+        z-index: 2;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.745);
+        transform: skewx(-15deg);
+        margin-left: -80px;
+    }
+
+    .text{
+        z-index: 3;
+        position: absolute;
+        top: 0px;
+        left:50%;
+        transform: translateX(-50%);
+
+        i:hover{
+            cursor: pointer;
+            background-color: rgb(55, 56, 56) !important;
+        }
+    }
+    
+}
